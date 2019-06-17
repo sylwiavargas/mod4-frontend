@@ -5,9 +5,14 @@ import React, { Component } from 'react';
 class NavigationButtonsContainer extends Component {
 
   render() {
-    return (
-      <div> NavigationButtonsContainer here</div>
-    );
+    const {logged, caseStudies, changePage} = this.props
+    // console.log(logged)
+
+    return (logged ?
+        caseStudies ?
+        <button onClick={()=>{changePage()}}> See Case Studies </button>
+        : <button onClick={()=>{changePage()}}> See Message Board</button>
+    : null)
   }
 
 }
