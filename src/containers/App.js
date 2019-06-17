@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div>
       <NavBarContainer logged={this.state.logged}/>
-      <MainContainer/>
+      <MainContainer logged={this.state.logged}/>
       </div>
     )
   }
