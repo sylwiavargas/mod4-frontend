@@ -6,9 +6,16 @@ import MessageBoardContainer from './MessageBoardContainer.js';
 class MainContainer extends Component {
 
   render() {
-    return (
-      <div>hey</div>
-    );
+    const {logged, userName, caseStudies} = this.props
+    // console.log(this.props)
+    return(
+      !logged ?
+      <ReportForm />
+      :
+        caseStudies ?
+        <CaseStudyContainer />
+        : <MessageBoardContainer />
+    )
   }
 
 }
