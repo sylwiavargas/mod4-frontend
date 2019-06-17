@@ -7,7 +7,7 @@ class NavBarContainer extends Component {
 
   render() {
     return (
-      <div>hey</div>
+      <div></div>
     );
   }
 
