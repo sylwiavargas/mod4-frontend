@@ -35,10 +35,18 @@ class App extends Component {
     })
   }
 
+  createStyles = () => {
+    let classNames = ""
+    classNames += this.state.dark ? "dark" : "light"
+    classNames += this.state.sizeUp ? " bigText" : " smallText"
+    classNames += this.state.fontReadable ? " readableFont" : " fancyFont"
+    return classNames
+  }
+
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
-      <div>
+      <div className={this.createStyles()}>
       <NavBarContainer
         logged={this.state.logged}
         changeLogin={this.changeLogin}
