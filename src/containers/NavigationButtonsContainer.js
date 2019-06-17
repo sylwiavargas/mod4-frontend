@@ -5,13 +5,13 @@ import React, { Component } from 'react';
 class NavigationButtonsContainer extends Component {
 
   render() {
-    const {logged, caseStudies, changePage} = this.props
+    const {logged, caseStudies, changeSetting} = this.props
     // console.log(logged)
 
     return (logged ?
         caseStudies ?
-        <button onClick={()=>{changePage()}}> See Case Studies </button>
-        : <button onClick={()=>{changePage()}}> See Message Board</button>
+        <button id="caseStudies" onClick={changeSetting}> See Case Studies </button>
+        : <button id="caseStudies" onClick={changeSetting}> See Message Board</button>
     : null)
   }
 

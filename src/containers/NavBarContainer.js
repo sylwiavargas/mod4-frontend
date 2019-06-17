@@ -6,12 +6,17 @@ import NavigationButtonsContainer from './NavigationButtonsContainer.js'
 class NavBarContainer extends Component {
 
   render() {
-    const {logged, changeLogin, saveData, userName, caseStudies, changePage} = this.props
+    const {logged, changeLogin, saveData, userName, caseStudies, changeSetting, dark, sizeUp, fontReadable} = this.props
     // console.log(this.props)
 
     return (
       <div>this is navbar here!
-      <AccessibilityContainer />
+      <AccessibilityContainer
+        dark={dark}
+        sizeUp={sizeUp}
+        fontReadable={fontReadable}
+        changeSetting={changeSetting}
+      />
       <LoginContainer
         logged={logged}
         changeLogin={changeLogin}
@@ -21,7 +26,7 @@ class NavBarContainer extends Component {
       <NavigationButtonsContainer
         logged={logged}
         caseStudies={caseStudies}
-        changePage={changePage}
+        changeSetting={changeSetting}
       />
       </div>
     );

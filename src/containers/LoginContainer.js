@@ -5,6 +5,11 @@ import React, { Component } from 'react';
 
 class LoginContainer extends Component {
 
+  capitalaizeName = () => {
+    let name = this.props.userName
+    return name.charAt(0).toUpperCase() + name.slice(1)
+  }
+
   render() {
     const {logged, changeLogin, saveData, userName} = this.props
     // console.log(logged, changeLogin)
@@ -23,7 +28,7 @@ class LoginContainer extends Component {
               />
             </form>
           </div>
-    : <div> Hey, {userName}!
+    : <div> Hey, {this.capitalaizeName()}!
         <button
         onClick={()=>changeLogin()}>
         Log out!

@@ -9,6 +9,9 @@ class App extends Component {
     logged: false,
     userName: "",
     caseStudies: true,
+    dark: false,
+    sizeUp: false,
+    fontReadable: false,
   }
 
   changeLogin = () => {
@@ -17,9 +20,12 @@ class App extends Component {
     })
   }
 
-  changePage = () => {
-    return this.setState(prevState => {
-      return {caseStudies: !prevState.caseStudies}
+  changeSetting = (event) => {
+    const data = event.target.id
+    this.setState(prevState => {
+      return {
+        [data]: !prevState[data]
+      }
     })
   }
 
@@ -39,7 +45,10 @@ class App extends Component {
         saveData={this.saveData}
         userName={this.state.userName}
         caseStudies={this.state.caseStudies}
-        changePage={this.changePage}/>
+        changeSetting={this.changeSetting}
+        dark={this.state.dark}
+        sizeUp={this.state.sizeUp}
+        fontReadable={this.state.fontReadable}/>
       <MainContainer logged={this.state.logged}/>
       </div>
     )
