@@ -7,7 +7,11 @@ class NavBarContainer extends Component {
 
   render() {
     return (
-      <div>hey</div>
+      <div>this is navbar here!
+      <AccessibilityContainer />
+      <LoginContainer />
+      <NavigationButtonsContainer />
+      </div>
     );
   }
 

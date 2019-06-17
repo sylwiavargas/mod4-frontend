@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../App.css';
 import NavBarContainer from './NavBarContainer.js';
 import MainContainer from './MainContainer.js';
+import ReportForm from '../components/ReportForm'
 
 
-function App() {
-  return (
-    <div>
-    <NavBarContainer/>
-    <MainContainer/>
-    </div>
-  );
+class App extends Component {
+
+  render() {
+    return (
+      <div>
+      <NavBarContainer/>
+      <MainContainer/>
+      </div>
+    )
+  }
 }
 
 export default App;
