@@ -9,7 +9,7 @@ class MessageBoardContainer extends Component {
 
   render() {
     return (
-      <div>hey</div>
+      <div>Message Board here</div>
     );
   }
 
