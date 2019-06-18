@@ -40,10 +40,9 @@ class MessageBoardContainer extends Component {
       })
     })
     .then(res => res.json())
-    .then(data => console.log(data))
-    .then(newMessage => this.setState (prevState => {
-      return {messages: [...prevState.messages, newMessage]
-    }}))
+    .then(newMessage => this.setState ({
+      messages: [...this.state.messages, newMessage]
+    }))
   }
 
   formInput = (event) => {
@@ -56,7 +55,7 @@ class MessageBoardContainer extends Component {
   render() {
     // console.log(this.state.messages)
     return (
-      <div>Message Board here
+      <div><br/>Message Board here <br/>
       <NewMessageForm formInput={this.formInput} postNewMessage={this.postNewMessage}/>
       <br />
       <MessageCard messages={this.state.messages}/>

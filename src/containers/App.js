@@ -7,7 +7,7 @@ class App extends Component {
 
   state = {
     logged: true,
-    userName: "",
+    userName: "Sylwia",
     caseStudies: false,
     dark: false,
     sizeUp: false,

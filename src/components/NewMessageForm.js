@@ -14,7 +14,7 @@ class NewMessageForm extends Component {
         Tell us how we can support you:
         <br />
         <input onChange={formInput} type="text" name="content"  placeholder="what do you want to learn?"  />
-        <input  type="submit" value="Submit" />
+        <input  type="submit" value="> share your worry with us <" />
       </form>
 
       </div>

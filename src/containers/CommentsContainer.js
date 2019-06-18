@@ -11,7 +11,7 @@ class CommentsContainer extends Component {
     content: ""
   }
 
-  postNewComment = (event) => {
+  postNewComment = (event, messageid) => {
     event.preventDefault()
     fetch(API, {
       method: 'POST',
@@ -20,33 +20,37 @@ class CommentsContainer extends Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        comment: {
         content: this.state.content,
         user_id: 1,
-        message_id: this.props.messageid
-      })
+        message_id: messageid
+      }})
     })
     .then(res => res.json())
-    .then(newComment => this.setState (prevState => {
-      return {comments: [...prevState.comments, newComment]
-    }}))
+    .then(newComment => this.setState ({
+      comments: [...this.state.comments, newComment]
+    }))
   }
 
   formInput = (event) => {
-    console.log(event.target.value)
     this.setState({
       [event.target.name]:event.target.value
     })
   }
 
+
   render() {
-    let {comments} = this.props
+    let {messageid} = this.props
     return (
-      <div>{
-        comments.map(comment =>
-        {return <> <Comment comment={comment} key={comment.id}/>
-        <NewCommentForm key={comment.id} commentid={comment.id} formInput={this.formInput} postNewComment={this.postNewComment}/>
+      <div>
+      HERE ARE COMMENTS TO THIS MESSAGE
+        {
+        this.state.comments.map(comment =>
+        {return <>
+          <Comment comment={comment} key={comment.id}/>
         </>
-      })}
+        })}
+        <NewCommentForm formInput={this.formInput} postNewComment={this.postNewComment} messageid={messageid}/>
       </div>
     )
   }

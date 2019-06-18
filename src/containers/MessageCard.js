@@ -6,15 +6,18 @@ class MessageCard extends Component {
 
   render() {
     let {messages} = this.props
-
     return (
-      <div>{
+      <div>
+      {
        messages.map(message =>
-         {return <>
-           <Message message={message} key={message.id}/>
-           <CommentsContainer comments={message.comments} key={message.id} messageid={message.id}/>
+         {if (message) {
+           return <>      <br/> **************** HERE IS A MESSAGE ****************
+           <Message message={message}/>
+           <CommentsContainer comments={message.comments} messageid={message.id}/>
           </>
-          }
+         } else {
+           return null
+         }}
         )
       }</div>
     );

@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 class NewCommentForm extends Component {
 
   render() {
-    let {formInput, postNewComment, commentid} = this.props
+    let {formInput, postNewComment, messageid} = this.props
 
     return (
       <div>
       <br />
-      <form  style={{fontFamily:"Arial", fontSize:10}}onSubmit={(event) => {postNewComment(event)}} className="reportform">
+      <form  style={{fontFamily:"Arial", fontSize:10}} onSubmit={(event) => {postNewComment(event, messageid)}} className="reportform">
         Do you have any tips to offer here?
         <br />
         <input onChange={formInput} type="text" name="content"  placeholder="do you have any tips?"  />
