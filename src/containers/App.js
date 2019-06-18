@@ -6,8 +6,8 @@ import MainContainer from './MainContainer.js';
 class App extends Component {
 
   state = {
-    logged: true,
-    userName: "Sylwia",
+    logged: false,
+    userName: "",
     caseStudies: false,
     dark: false,
     sizeUp: false,

@@ -12,20 +12,18 @@ class NavBarContainer extends Component {
     return (
 
       <div>
-        this is navbar here!
-
       <AccessibilityContainer
         dark={dark}
         sizeUp={sizeUp}
         fontReadable={fontReadable}
         changeSetting={changeSetting}
-      />
+      /><br/>
       <LoginContainer
         logged={logged}
         changeLogin={changeLogin}
         saveData={saveData}
         userName={userName}
-      />
+      /><br/>
       <NavigationButtonsContainer
         logged={logged}
         caseStudies={caseStudies}

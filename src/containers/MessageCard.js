@@ -11,10 +11,11 @@ class MessageCard extends Component {
       {
        messages.map(message =>
          {if (message) {
-           return <>      <br/> **************** HERE IS A MESSAGE ****************
+           return <div className="casecard">      <br/> **************** HERE IS A MESSAGE ****************
            <Message message={message}/>
            <CommentsContainer comments={message.comments} messageid={message.id}/>
-          </>
+           <br/>
+          </div>
          } else {
            return null
          }}

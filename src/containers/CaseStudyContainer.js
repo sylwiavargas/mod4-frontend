@@ -40,9 +40,9 @@ class CaseStudyContainer extends Component {
     })
     const types = [...new Set([...typeOfThing])]
 
-    console.log(this.state.chosenType, "STATE BABAY!")
+    // console.log(this.state.chosenType, "STATE BABAY!")
     return(
-    <div>
+    <div><br/><br/>
     <select  value="all" onChange={this.handleSelect}>
       <option value="all"> choose a topic youd like to see</option>
       {types.map(eachType=>{

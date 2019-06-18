@@ -18,7 +18,7 @@ class MessageBoardContainer extends Component {
     .then(res => res.json())
     .then(messages =>
     this.setState({
-      messages: messages
+      messages: messages.reverse()
     }))
   }
 
@@ -55,7 +55,7 @@ class MessageBoardContainer extends Component {
   render() {
     // console.log(this.state.messages)
     return (
-      <div><br/>Message Board here <br/>
+      <div><br/>
       <NewMessageForm formInput={this.formInput} postNewMessage={this.postNewMessage}/>
       <br />
       <MessageCard messages={this.state.messages}/>

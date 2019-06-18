@@ -28,7 +28,7 @@ class CommentsContainer extends Component {
     })
     .then(res => res.json())
     .then(newComment => this.setState ({
-      comments: [...this.state.comments, newComment]
+      comments: [newComment, ...this.state.comments]
     }))
   }
 
