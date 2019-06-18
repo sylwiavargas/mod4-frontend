@@ -47,6 +47,7 @@ class App extends Component {
     // console.log(this.state)
     return (
       <div className={this.createStyles()}>
+
         <NavBarContainer
           logged={this.state.logged}
           changeLogin={this.changeLogin}
@@ -60,6 +61,7 @@ class App extends Component {
         <MainContainer
           logged={this.state.logged}
           caseStudies={this.state.caseStudies}/>
+
       </div>
     )
   }
