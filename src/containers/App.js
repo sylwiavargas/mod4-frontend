@@ -59,8 +59,7 @@ class App extends Component {
         fontReadable={this.state.fontReadable}/>
       <MainContainer
         logged={this.state.logged}
-        caseStudies={this.state.caseStudies}
-        userName={this.state.userName}/>
+        caseStudies={this.state.caseStudies}/>
       </div>
     )
   }

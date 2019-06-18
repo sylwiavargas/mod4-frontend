@@ -6,7 +6,7 @@ import MessageBoardContainer from './MessageBoardContainer.js';
 class MainContainer extends Component {
 
   render() {
-    const {logged, userName, caseStudies} = this.props
+    const {logged, caseStudies} = this.props
     // console.log(this.props)
     return(
       !logged ?

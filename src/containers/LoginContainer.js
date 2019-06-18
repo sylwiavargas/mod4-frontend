@@ -11,7 +11,7 @@ class LoginContainer extends Component {
   }
 
   render() {
-    const {logged, changeLogin, saveData, userName} = this.props
+    const {logged, changeLogin, saveData} = this.props
     // console.log(logged, changeLogin)
 
     return (!logged ?
