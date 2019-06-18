@@ -11,7 +11,9 @@ class NavBarContainer extends Component {
 
     return (
 
-      <div>this is navbar here!
+      <div>
+        this is navbar here!
+        
       <AccessibilityContainer
         dark={dark}
         sizeUp={sizeUp}

@@ -36,3 +36,8 @@
 width: 60%;
 height: 40px;
 }
+
+.casecard{
+  border: 2px;
+  border-style: inset;              
+}
