@@ -6,9 +6,9 @@ import MainContainer from './MainContainer.js';
 class App extends Component {
 
   state = {
-    logged: false,
-    userName: "",
-    caseStudies: true,
+    logged: true,
+    userName: "Sylwia",
+    caseStudies: false,
     dark: false,
     sizeUp: false,
     fontReadable: false,
@@ -36,7 +36,7 @@ class App extends Component {
   }
 
   createStyles = () => {
-    let classNames = ""
+    let classNames = "thing "
     classNames += this.state.dark ? "dark" : "light"
     classNames += this.state.sizeUp ? " bigText" : " smallText"
     classNames += this.state.fontReadable ? " readableFont" : " fancyFont"
@@ -47,22 +47,21 @@ class App extends Component {
     // console.log(this.state)
     return (
       <div className={this.createStyles()}>
-      <NavBarContainer
-        logged={this.state.logged}
-        changeLogin={this.changeLogin}
-        saveData={this.saveData}
-        userName={this.state.userName}
-        caseStudies={this.state.caseStudies}
-        changeSetting={this.changeSetting}
-        dark={this.state.dark}
-        sizeUp={this.state.sizeUp}
-        fontReadable={this.state.fontReadable}/>
-      ------------------------------
 
-      <MainContainer
-        logged={this.state.logged}
-        caseStudies={this.state.caseStudies}
-        userName={this.state.userName}/>
+        <NavBarContainer
+          logged={this.state.logged}
+          changeLogin={this.changeLogin}
+          saveData={this.saveData}
+          userName={this.state.userName}
+          caseStudies={this.state.caseStudies}
+          changeSetting={this.changeSetting}
+          dark={this.state.dark}
+          sizeUp={this.state.sizeUp}
+          fontReadable={this.state.fontReadable}/>
+        <MainContainer
+          logged={this.state.logged}
+          caseStudies={this.state.caseStudies}/>
+
       </div>
     )
   }

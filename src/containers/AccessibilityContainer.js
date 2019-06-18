@@ -1,6 +1,6 @@
 // here will be accessibility functions
 import React, { Component } from 'react';
-import AccButtons, {Dark, SizeUp, FontReadable} from '../components/AccButtons.js'
+import {Dark, SizeUp, FontReadable} from '../components/AccButtons.js'
 
 
 class AccessibilityContainer extends Component {

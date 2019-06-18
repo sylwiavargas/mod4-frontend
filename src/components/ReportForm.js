@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class ReportForm extends Component {
 
   state = {
-
     description: "description",
     what_made_you_feel: "bad",
     what_you_wish_done: "more",
@@ -11,7 +10,6 @@ class ReportForm extends Component {
     your_name: "anon",
     persons_name: "anon persons",
     your_email:"email here"
-
   }
 
   postNewForm = (event) => {
@@ -38,7 +36,6 @@ class ReportForm extends Component {
     // publish: ""
       })
     }).then(res => res.json())
-
   }
 
   formInput = (event) => {
