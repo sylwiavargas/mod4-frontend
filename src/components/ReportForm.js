@@ -38,7 +38,6 @@ class ReportForm extends Component {
     // publish: ""
       })
     }).then(res => res.json())
-
   }
 
   formInput = (event) => {

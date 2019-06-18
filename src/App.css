@@ -32,7 +32,7 @@
   }
 }
 
-.reportform, input{
+.reportform input{
 width: 60%;
 height: 40px;
 }

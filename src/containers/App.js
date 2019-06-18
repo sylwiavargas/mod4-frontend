@@ -6,9 +6,9 @@ import MainContainer from './MainContainer.js';
 class App extends Component {
 
   state = {
-    logged: false,
+    logged: true,
     userName: "",
-    caseStudies: true,
+    caseStudies: false,
     dark: false,
     sizeUp: false,
     fontReadable: false,

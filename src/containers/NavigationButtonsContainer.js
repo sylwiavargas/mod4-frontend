@@ -10,8 +10,8 @@ class NavigationButtonsContainer extends Component {
 
     return (logged ?
         caseStudies ?
-        <button id="caseStudies" onClick={changeSetting}> See Case Studies </button>
-        : <button id="caseStudies" onClick={changeSetting}> See Message Board</button>
+        <button id="caseStudies" onClick={changeSetting}> See Message Board  </button>
+        : <button id="caseStudies" onClick={changeSetting}> See Case Studies</button>
     : null)
   }
 
