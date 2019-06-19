@@ -21,10 +21,13 @@ class CaseStudyCard extends Component {
     <br/>
     {this.props.caseData.queston}
     <br/>
-    a professional opion
+    <strong> how about a professional opion </strong>
     <br/>
     {this.props.caseData.comment}
   <br/>
+  <strong> read more:</strong>
+  <br/>
+  {this.props.caseData.resources}
 
     <br/>
     </div>

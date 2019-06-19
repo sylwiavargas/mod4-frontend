@@ -58,8 +58,6 @@ class CaseStudyContainer extends Component {
     }
     )}
     <CaseStudyCommentCard/>
-    <CaseStudyButtonsContainer/>
-    <MoreCaseStudies/>
     </div>
   );
   }
