@@ -9,7 +9,7 @@ class AccessibilityContainer extends Component {
     const {dark, sizeUp, fontReadable, changeSetting} = this.props
 
     return (
-      <div>
+      <div className="access">
         <Dark
           dark={dark}
           changeSetting={changeSetting}

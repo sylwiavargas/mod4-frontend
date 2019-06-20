@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  /* align-items: center;
+  max-width: 960px;
+ margin: auto; */
+
+}
+
+.access {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+
+}
+
 .thing {
   position: fixed;
   left: 0px;
@@ -5,20 +23,24 @@
   height: 100%;
   width: 100%;
   overflow: scroll;
+
+  /* text-align: center; */
 }
 
 .dark {
   background-color: #2c0663;
-  color: #b4fa50;
+  color: 	#8470ff;
+  /* color: #b4fa50; */
 }
 
 .light {
+  /* background-color: #b39eb5; */
   background-color: #fffffe;
   color: #2c0663;
 }
 
 .sizeUp {
-  font-size: 120%;
+  font-size: 120px;
 }
 
 .fontReadable {
@@ -28,9 +50,126 @@
 .reportform input{
   width: 60%;
   height: 40px;
+  /* background-color: red;
+  color: white; */
 }
 
-.casecard{
-  border: 2px;
-  border-style: inset;
+.reportform{
+  text-align: center;
+  background-color:  #E8E8EE
 }
+
+.casecard {
+
+  text-align: center;
+  border-radius: 3px;
+  border-style: outset;
+
+}
+
+.messagecard{
+  text-align:center;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  border-radius: 3px;
+  border-style: outset;
+  /* background-color: #b39eb5 */
+
+
+}
+.casestudycards{
+
+  display: grid;
+  grid-template-columns:1fr 1fr ;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  border-radius: 3px;
+  border-style: outset;
+  text-align:center;
+
+
+
+}
+
+.loginname {
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.logoutbutton{
+  position: absolute;
+  top: 0%;
+  left: 10%;
+}
+
+#caseStudies{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+}
+
+
+.usermessage {
+  font-size: 30px;
+
+  border-bottom: 3px inset;
+
+}
+
+.usercomments{
+  font-size: 17px;
+  border-width: 1px;
+  border-color: rgb(160,160,255);
+
+}
+
+.messagecontain{
+  border-radius: 3px;
+  border-style: outset;
+  /* background-color: #D3D3D3; */
+  background-color: #EEEEEE
+
+}
+
+.justmessage{
+
+  /* background-color: #D3D3D3; */
+  /* background-color: #b39eb5; */
+  background-color: #E8E8EE;
+
+}
+
+.caseclosed{
+  position: absolute;
+  right: 0%
+
+}
+
+.questions{
+  font-size: 25px;
+  font-style: italic;
+
+}
+
+.questionstwo{
+  width: 100%;
+  font-size: 25px;
+  font-style: italic;
+  text-decoration: underline;
+  background-color: #EEEEEE
+}
+
+.editform{
+  text-align: center
+}
+
+
+/* input[type="button"], input[type="submit"]{
+  background-color: #b39eb5;
+  font-size: 12px
+
+} */

@@ -1,21 +1,27 @@
+
 import React, { Component } from 'react';
 import ReportForm from '../components/ReportForm.js';
 import CaseStudyContainer from './CaseStudyContainer.js';
 import MessageBoardContainer from './MessageBoardContainer.js';
-
+import AdminCaseStudyContainer from './AdminCaseStudyContainer.js';
+import AdminMessageBoardContainer from './AdminMessageBoardContainer.js';
 
 class MainContainer extends Component {
 
   render() {
-    const {logged, caseStudies} = this.props
+    const {logged, caseStudies, userName} = this.props
     // console.log(this.props)
     return(
       !logged ?
       <ReportForm />
       :
-        caseStudies ?
-        <CaseStudyContainer />
-        : <MessageBoardContainer />
+        userName === "sylwia" ?
+          caseStudies ?
+          <CaseStudyContainer userName={userName}/>
+          : <MessageBoardContainer userName={userName}/>
+        : caseStudies ?
+          <AdminCaseStudyContainer userName={userName}/>
+          : <AdminMessageBoardContainer userName={userName}/>
     )
   }
 

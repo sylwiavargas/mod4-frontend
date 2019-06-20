@@ -7,12 +7,12 @@ class MessageCard extends Component {
   render() {
     let {messages} = this.props
     return (
-      <div>
+      <div className="messagecard">
       {
        messages.map(message =>
          {if (message) {
-           return <div className="casecard">      <br/> **************** HERE IS A MESSAGE ****************
-           <Message message={message}/>
+           return <div className="messagecontain" >      <br/>
+           <div className="justmessage"><Message message={message}/></div>
            <CommentsContainer comments={message.comments} messageid={message.id}/>
            <br/>
           </div>

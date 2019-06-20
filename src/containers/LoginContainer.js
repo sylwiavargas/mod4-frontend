@@ -18,9 +18,14 @@ class LoginContainer extends Component {
           <div className="login">
             <form className="login-form">
               <input
-              placeholder="Enter a username..."
+              placeholder="Enter your username"
               name="userName"
               onChange={(event) => saveData(event)}/>
+              <input
+                name="password"
+                type="password"
+                placeholder="Enter your password"
+              />
               <input
               type="submit"
               value="Log In"
@@ -28,8 +33,8 @@ class LoginContainer extends Component {
               />
             </form>
           </div>
-    : <div> Hey, {this.capitalaizeName()}!
-        <button
+    : <div className="loginname"> Hey, {this.capitalaizeName()}!
+        <button className="logoutbutton"
         onClick={()=>changeLogin()}>
         Log out!
         </button>

@@ -7,7 +7,8 @@ class Comment extends Component {
     let {content} = this.props.comment
       return (
         <div>
-            <p>{content}</p>
+          
+            <p>💬  {content}</p>
         </div>
       )
   }

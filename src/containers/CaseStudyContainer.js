@@ -33,8 +33,9 @@ class CaseStudyContainer extends Component {
       chosenType: event.target.value
     })
   }
+
   render() {
-    // console.log(this.state, "State in case studies container")
+    console.log(this.state, "State in case studies container")
     const typeOfThing = this.state.allCaseStudies.map(oneThing =>{
       return oneThing.type.name
     })
@@ -49,15 +50,16 @@ class CaseStudyContainer extends Component {
         return <option value={eachType}>{eachType}</option>
       })}
     </select>
+    <div className="casestudycards">
     {this.state.allCaseStudies.map(caseData =>{
       if (caseData.type.name === this.state.chosenType){
-    return <CaseStudyCard caseData={caseData}/>
+    return <CaseStudyCard caseData={caseData} userName={this.props.userName}/>
   }if(this.state.chosenType === "all"){
-    return <CaseStudyCard caseData={caseData}/>
+    return <CaseStudyCard caseData={caseData} userName={this.props.userName}/>
   }
     }
     )}
-    <CaseStudyCommentCard/>
+    </div>
     </div>
   );
   }

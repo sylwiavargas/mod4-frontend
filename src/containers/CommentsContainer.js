@@ -42,14 +42,16 @@ class CommentsContainer extends Component {
   render() {
     let {messageid} = this.props
     return (
-      <div>
-      HERE ARE COMMENTS TO THIS MESSAGE
+      <div >
+          responses below
+        <div className="usercomments">
         {
         this.state.comments.map(comment =>
         {return <>
           <Comment comment={comment} key={comment.id}/>
         </>
         })}
+        </div>
         <NewCommentForm formInput={this.formInput} postNewComment={this.postNewComment} messageid={messageid}/>
       </div>
     )

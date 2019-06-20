@@ -6,7 +6,7 @@ import MessageCard from './MessageCard.js'
 
 const API = 'http://localhost:3000/api/v1/messages'
 
-class MessageBoardContainer extends Component {
+class AdminMessageBoardContainer extends Component {
 
   state = {
     content: "",
@@ -45,6 +45,32 @@ class MessageBoardContainer extends Component {
     }))
   }
 
+  deleteMessageFromState = (id) => {
+
+    let index = id-1
+    let array = [...this.state.messages]
+    if (index !== -1) {
+      array.splice(index, 1);
+      return this.setState({messages: array});
+    }
+  }
+
+  deleteMessageFromDatabase = (id) => {
+
+    fetch(API + `/${id}`, {
+      method: 'DELETE',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({id: id})
+    })
+    .then(res => res.text())
+  }
+
+  deleteMessage = (event, id) => {
+
+    this.deleteMessageFromState(id)
+    this.deleteMessageFromDatabase(id)
+  }
+
   formInput = (event) => {
     // console.log(event.target.value)
     this.setState({
@@ -55,16 +81,14 @@ class MessageBoardContainer extends Component {
   render() {
     // console.log(this.state.messages)
     return (
-      <div ><br/>
+      <div><br/>
       <NewMessageForm formInput={this.formInput} postNewMessage={this.postNewMessage}/>
       <br />
-    
-      <MessageCard
-       messages={this.state.messages}/>
+      <MessageCard messages={this.state.messages} deleteMessage={this.deleteMessage}/>
       </div>
     );
   }
 
 }
 
-export default MessageBoardContainer;
+export default AdminMessageBoardContainer;
