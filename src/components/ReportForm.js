@@ -15,7 +15,7 @@ class ReportForm extends Component {
   postNewForm = (event) => {
     event.preventDefault()
     event.target.reset()
-    fetch("http://localhost:3000/api/v1/forms",{
+    fetch("https://here-backend.herokuapp.com/api/v1/forms",{
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

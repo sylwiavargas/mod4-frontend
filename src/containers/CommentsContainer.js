@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Comment from '../components/Comment.js'
 import NewCommentForm from '../components/NewCommentForm.js'
 
-const API = 'http://localhost:3000/api/v1/comments'
+const API = 'https://here-backend.herokuapp.com/api/v1/comments'
 
 class CommentsContainer extends Component {
 

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import NewMessageForm from '../components/NewMessageForm.js'
 import MessageCard from './MessageCard.js'
 
-const API = 'http://localhost:3000/api/v1/messages'
+const API = 'https://here-backend.herokuapp.com/api/v1/messages'
 
 class MessageBoardContainer extends Component {
 
@@ -58,7 +58,7 @@ class MessageBoardContainer extends Component {
       <div ><br/>
       <NewMessageForm formInput={this.formInput} postNewMessage={this.postNewMessage}/>
       <br />
-    
+
       <MessageCard
        messages={this.state.messages}/>
       </div>
